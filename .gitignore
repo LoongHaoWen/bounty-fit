@@ -4,3 +4,5 @@
 !.env.example
 node_modules/
 *.mp4
+SUBMIT.md
+nebius_note.md
