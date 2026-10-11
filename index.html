@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bounty Fit — can you enter, and can you get paid?</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Bounty <span>Fit</span></h1>
+    <p class="tag">Paste a bounty or hackathon rules page. Get a go / no-go for <em>you</em> — eligibility, payout rail, AI policy, and the deadline in your time zone.</p>
+  </header>
+  <main>
+    <section class="left">
+      <details id="profileBox" open>
+        <summary>Your payout &amp; eligibility profile</summary>
+        <div class="grid">
+          <label>Country of residence
+            <select id="country"></select>
+          </label>
+          <label>Your time zone
+            <input id="timeZone" list="tzlist" placeholder="Asia/Shanghai">
+            <datalist id="tzlist"><option>Asia/Shanghai</option><option>Asia/Singapore</option><option>Asia/Tokyo</option><option>Europe/London</option><option>Europe/Madrid</option><option>America/New_York</option><option>America/Los_Angeles</option><option>UTC</option></datalist>
+          </label>
+        </div>
+        <fieldset id="rails"><legend>Payout methods you can actually receive</legend></fieldset>
+        <label class="inline"><input type="checkbox" id="needsAI"> I build with AI help (flag "no AI" rules as blockers)</label>
+        <p class="saved" id="saved">Saved in this browser only.</p>
+      </details>
+      <label for="rules" class="big">Rules text</label>
+      <textarea id="rules" placeholder="Paste the rules / eligibility / prizes section here…"></textarea>
+      <div class="row">
+        <button id="check" class="primary">Check fit <kbd>Ctrl</kbd>+<kbd>Enter</kbd></button>
+        <span class="samples-label">Try a sample:</span>
+        <span id="samples"></span>
+      </div>
+    </section>
+    <section class="right" id="result">
+      <div class="empty">
+        <p>Your verdict appears here.</p>
+        <p class="muted">Nothing leaves your browser — the rules are read by a small, explainable pattern engine, and every finding quotes the sentence it came from.</p>
+      </div>
+    </section>
+  </main>
+  <footer>Not legal or tax advice. Always read the full rules. · MIT licensed</footer>
+  <script src="src/fit.js"></script>
+  <script src="samples/samples.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

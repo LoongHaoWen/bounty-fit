@@ -1,0 +1,8 @@
+{
+  "name": "bounty-fit",
+  "version": "0.1.0",
+  "description": "Paste a bounty or hackathon rules page; get a go/no-go on whether you can enter AND get paid.",
+  "license": "MIT",
+  "scripts": { "start": "node server.js", "test": "node --test test/" },
+  "engines": { "node": ">=18" }
+}
